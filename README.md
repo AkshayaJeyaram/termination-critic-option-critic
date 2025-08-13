@@ -67,6 +67,7 @@ CSVs: tcoc-<run>_episodes.csv, tcoc-<run>_option_stats.csv.
 
 ## Project Structure
 
+```
 termination_critic_OC_dissertation/
 ├── agents/
 │   └── option_critic.py              # OC & TC-OC networks (MLP + CNN; β-adv head)
@@ -91,6 +92,8 @@ termination_critic_OC_dissertation/
 ├── models/                           # Checkpoints                [gitignored]
 ├── requirements.txt
 └── README.md
+
+```
 
 ## Training Details
 
