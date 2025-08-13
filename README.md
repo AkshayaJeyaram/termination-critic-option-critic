@@ -21,3 +21,49 @@ PYTHONPATH=. python train/train_option_critic.py \
   --env fourrooms --num-options 2 --seed 0
 ```
 
+## Baselines
+
+```bash
+# DQN
+PYTHONPATH=. python dqn_baseline.py
+
+# PPO
+PYTHONPATH=. python ppo_baseline.py
+```
+
+##Plots and Diagnostics
+
+###Auto-detect the latest -TC run:
+
+```bash
+PYTHONPATH=. python -m tcoc.visuals_tcoc
+```
+
+###Or point to a specific run directory:
+
+```bash
+PYTHONPATH=. python -m tcoc.visuals_tcoc --run-dir runs/OptionCriticMLP-fourrooms-default-TC
+```
+
+Outputs go to graphs/ (gitignored), e.g.:
+
+  tcoc-<run>_reward_curve.png
+  
+  tcoc-<run>_loss_curves.png
+  
+  tcoc-<run>_termination_probs.png
+  
+  tcoc-<run>_beta_critic_loss.png
+  
+  tcoc-<run>_option_lengths_weighted.png
+  
+  tcoc-<run>_option_time_share.png
+  
+  tcoc-<run>_switches_per_episode.png
+  
+  tcoc-<run>_success_rate.png
+
+CSVs: tcoc-<run>_episodes.csv, tcoc-<run>_option_stats.csv.
+
+
+
